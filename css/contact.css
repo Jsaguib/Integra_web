@@ -1,0 +1,358 @@
+:root {
+    --main-color: #0067d1;
+    --grey-color: #B5B5B5;
+    --black-color: #262626;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Inicia descripción contacto */
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 450px;
+}
+
+.contact-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-description img {
+    width: 320px;
+}
+
+.contact-description p {
+    padding: 0 30px;
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact-description img:nth-child(3) {
+    width: 45px;
+}
+
+/* Termina descripción contacto */
+
+/* Inicia sección general de títulos de medios de contacto */
+
+.contact-modes-container-desktop, .desktop-location, .desktop-faq {
+    display: none;
+}
+
+.contact-modes-container {
+    padding: 50px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-modes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 322px;
+    height: 53px;
+    background-color: white;
+    border: 1px solid var(--main-color);
+    border-radius: 20px 20px 0 0;
+}
+
+.contact-modes h3 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 169.23px;
+}
+
+.fa-phone,
+.fa-inbox,
+.fa-share-nodes,
+.fa-location-dot,
+.fa-flag {
+    font-size: 1.5rem;
+    color: var(--main-color)
+}
+
+/* Termina sección general de títulos de medios de contacto */
+
+/* Inicia apartado de información de contacto celular */
+
+.contact-phone-container {
+    position: relative;
+}
+
+.contact-phone-content,
+.contact-email-content,
+.contact-media-content,
+.contact-location-content {
+    padding: 30px 0;
+    top: 52px;
+    text-align: center;
+    width: 322px;
+    background-color: var(--main-color);
+    z-index: 999;
+    color: white;
+    border-radius: 0 0 20px 20px;
+}
+
+.contact-phone-content h4,
+.contact-email-content h4,
+.contact-media-content h4,
+.contact-location-content h4 {
+    font-weight: 500;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.contact-phone-content p,
+.contact-email-content p,
+.contact-media-content p,
+.contact-location-content p {
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.contact-phone-content p:nth-child(2) {
+    margin-bottom: 30px;
+}
+
+/* Termina apartado de información de contacto celular */
+
+/* Inicia apartado de información de email celular */
+
+.contact-email-content p:nth-child(2),
+.contact-email-content p:nth-child(3) {
+    margin-bottom: 15px;
+}
+
+/* Termina apartado de información de email celular */
+
+/* Inicia apartado de información de RRSS celular */
+
+.contact-media-content p:nth-child(2) {
+    margin-bottom: 15px;
+}
+
+.contact-media-content p:nth-child(3) {
+    margin-bottom: 30px;
+}
+
+/* Termina apartado de información de RRSS celular */
+
+.contact-location-content a,
+.contact-phone-content a,
+.contact-email-content a,
+.contact-media-content a {
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+@media (min-width: 1000px) {
+    .contact-container {
+        height: 450px;
+    }
+    .contact-description p {
+        width: 468.4px;
+    }
+}
+
+@media (min-width: 763px) {
+    .contact-description {
+        flex-direction: row;
+    }
+    .contact-description img:nth-child(3) {
+        display: none!important;
+    }
+}
+
+@media (min-width: 600px) {
+    .contact-container {
+        justify-content: center;
+        height: 420px;
+    }
+    .contact-description img {
+        width: 500px;
+    }
+    .contact-description p {
+        text-align: justify;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .contact-description img:nth-child(3) {
+        display: block;
+    }
+    .contact-modes-container {
+        display: none;
+    }
+    
+    /* DESKTOP */
+
+    .contact-modes-container-desktop {
+        padding: 40px 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .contact-mode-call {
+        padding: 30px;
+        text-align: center;
+        width: 279px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgb(0 99 186 / 20%);
+    }
+
+    .directory-call-desktop h3 {
+        font-size: 1.8rem;
+    }
+
+    .directory-call-desktop h3:after {
+        margin: 0 auto;
+        display: block;
+        content: "";
+        width: 50px;
+        height: 2px;
+        background-color: var(--main-color);
+        border-radius: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .directory-sales h4,
+    .directory-general h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .directory-sales h4 {
+        margin-top: 20px;
+    }
+
+    .directory-sales p, 
+    .directory-general p {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .directory-sales a,
+    .directory-general a {
+        color: var(--black-color);
+        text-decoration: none;
+        transition: .4s;
+    }
+
+    .directory-sales a:hover,
+    .directory-general a:hover {
+        color: var(--main-color);
+    }
+
+    .fa-phone, .fa-inbox, .fa-share-nodes {
+        color: var(--main-color);
+        font-size: 2rem;
+        position: relative;
+        left: 0;
+        margin-bottom: 20px;
+    }
+
+    .desktop-location {
+        padding: 0 20px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .desktop-location iframe {
+        width: 897px;
+    }
+
+    .desktop-faq {
+        width: 100%;
+        height: auto;
+        padding: 40px 0;
+        display: block;
+    }
+
+    .desktop-faq-title {
+        padding: 0 20px;
+        margin: 0 auto;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .desktop-faq-title h3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 897px;
+        height: 40px;
+        color: white;
+        font-size: 1.8rem;
+        background-color: var(--main-color);
+        border-radius: 20px;
+    }
+
+    .desktop-faq-question {
+        padding: 0 20px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .desktop-faq-list {
+        width: 897px;
+    }
+
+    .desktop-faq-question-answer {
+        padding: 30px 0;
+    }
+
+    .desktop-faq-question-answer h4 {
+        font-size: 1.5rem;
+    }
+
+    .desktop-faq-question-answer h4:after {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: block;
+        content: "";
+        width: 100%;
+        height: 0.5px;
+        background-color: var(--main-color);
+    }
+
+    .desktop-faq-question-answer p {
+        font-size: 1.5rem;
+    }
+}

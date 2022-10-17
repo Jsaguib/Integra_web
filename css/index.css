@@ -1,0 +1,345 @@
+:root {
+    --main-color: #0067d1;
+    --grey-color: #B5B5B5;
+    --black-color: #262626;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+  /* Inicia Hero */
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.slider-description {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 245px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.slider h1 {
+    text-align: start;
+    color: white;
+    font-size: 3rem;
+    padding: 0 20px;
+}
+
+.slider h1::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 52px;
+    height: 10px;
+    top: -17px;
+    background-color: var(--main-color);
+}
+
+.slider p {
+    margin-top: 20px;
+    color: white;
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+.slider button {
+    margin-left: 20px;
+    background-color: white;
+    color: var(--main-color);
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    width: 150px;
+    height: 45px;
+    font-size: 1.5rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+.slider button:hover {
+    transform: scale(1.05);
+    background-color: rgb(224, 224, 224);
+}
+
+.slider ul {
+    display: flex;
+    animation: cambio 20s infinite alternate ease-in-out;
+    width: 400%;
+    transition: .4s;
+}
+.slider li {
+    width: 100%;
+    list-style: none;
+    transition: .4s;
+}
+.imgone {
+    background-image: linear-gradient(0deg, rgb(5, 94, 196), rgba(0, 0, 0, 0.5)), url(../assets/backgrounds/bg_four.jpg);
+}
+.imgtwo {
+    background: linear-gradient(0deg, rgb(5, 94, 196), rgba(0, 0, 0, 0.5)), url(../assets/backgrounds/bg_two.jpg);
+}
+.imgthree {
+    background: linear-gradient(0deg, rgb(5, 94, 196), rgba(0, 0, 0, 0.5)), url(../assets/backgrounds/bg_three.jpg);
+}
+.imgfour {
+    background: linear-gradient(0deg, rgb(5, 94, 196), rgba(0, 0, 0, 0.5)), url(../assets/backgrounds/bg_four.jpg);
+}
+.slider img {
+    width: 100%;
+    height: 100vh;
+    transition: .4s; 
+    background-size: cover;
+    background-position: center center;
+    transition: .4s;
+  }
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+      
+    25%{margin-left: -100%;}
+    45%{margin-left: -100%;}
+      
+    50%{margin-left: -200%;}
+    70%{margin-left: -200%;}
+      
+    75%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+  }
+
+  @media only screen and (min-width:320px) and (max-width:768px){
+  .slider, .slider ul, .slider img{
+      height: 100vh;
+  }
+}
+
+/* Termina Hero */
+
+/* Inicia sección de tarjetas de información */
+
+.cards {
+    margin: 20px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.card {
+    margin: 30px 0;
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 5px 15px rgb(0 99 186 / 20%);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card i {
+    margin-top: 10px;
+    font-size: 3.5rem;
+    color: var(--main-color);
+}
+
+.card h3 {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.card p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: justify;
+    padding: 20px;
+}
+
+.eng::before,
+.qua::before {
+    position: absolute;
+    display: block;
+    top: -30px;
+    content: "";
+    width: 20px;
+    height: 30px;
+    background-color: var(--main-color);
+}
+
+/* Termina sección de tarjetas de información */
+
+ .choose {
+    width: 100%;
+    height: auto;
+}
+
+.choose-container {
+    padding: 0 20px;
+}
+
+.known {
+    width: 100%;
+    height: 200px;
+    margin: 30px 0;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgb(0 99 186 / 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.known h4 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+}
+
+.known-one {
+    background: linear-gradient(0deg, rgb(5, 94, 196), rgba(255, 255, 255, 0.1)), url(../assets/extra/productos.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.known-one:hover {
+    background: linear-gradient(0deg, #0092ff, rgba(255, 255, 255, 0.1)), url(../assets/extra/productos.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.known-two {
+    background: linear-gradient(0deg, rgb(5, 94, 196), rgba(255, 255, 255, 0.1)), url(../assets/backgrounds/bg_two.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.known-two:hover {
+    background: linear-gradient(0deg, #0092ff, rgba(255, 255, 255, 0.1)), url(../assets/backgrounds/bg_two.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.known-three {
+    background: linear-gradient(0deg, rgb(5, 94, 196), rgba(255, 255, 255, 0.1)), url(../assets/extra/contacto.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.known-three:hover {
+    background: linear-gradient(0deg, #0092ff, rgba(255, 255, 255, 0.1)), url(../assets/extra/contacto.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#link {
+    text-decoration: none;
+    color: black;
+} 
+
+/* Inicia sección de phrase */
+
+.phrase {
+    width: 100%;
+    height: auto;
+    background-color: var(--main-color);
+}
+
+.phrase-container {
+    height: 200px;
+}
+
+.phrase-container p {
+    font-size: 2rem;
+}
+
+/* Termina sección de phrase */
+
+@media (min-width: 1000px) {
+    .cards-container {
+        display: flex;
+        width: 950px;
+        gap: 20px;
+    }
+    .eng::before,
+    .qua::before {
+        top: 180px;
+        width: 20px;
+        height: 15px;
+        left: -20px;
+    }
+    .card p {
+        height: 242.2px;
+    }
+    .choose {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .choose-container {
+        width: 1000px;
+        align-items: center;
+        justify-content: center;
+    }
+    .known h4 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 426px) {
+    .slider-description {
+        width: 426px;
+    }
+}
+
+@media (min-width: 768px) {
+    .slider-description {
+        margin-top: 125px;
+        width: 100%;
+        align-items: center;
+    }
+    .slider h1 {
+        text-align: center;
+        width: 700px;
+        font-size: 5rem;
+    }
+    .slider p {
+        text-align: center;
+        font-size: 2rem;
+        width: 800px;
+    }
+    .slider button {
+        margin-top: 30px;
+        width: 300px;
+    }
+}

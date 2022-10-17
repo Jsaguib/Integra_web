@@ -1,0 +1,126 @@
+:root {
+    --main-color: #0067d1;
+    --grey-color: #B5B5B5;
+    --black-color: #262626;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.products {
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product {
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgb(0 99 186 / 20%);
+    width: 300px;
+    height: 380px;
+}
+
+.products-container {
+    width: 950px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product button {
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 20px;
+    border: none;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    width: 220px;
+    border: none;
+    height: 45px;
+    transition: .4s;
+}
+
+.product button:hover {
+    background-color: white;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+}
+
+/* dqwdqw */
+
+.need-information {
+    text-align: center;
+    margin-top: 30px;
+    background-color: var(--main-color);
+    width: 100%;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.need-information h2 {
+    font-size: 2rem;
+}
+
+.need-information p {
+    margin-top: 10px;
+    font-size: 1.5rem;
+}
+
+.wpp-information {
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    transition: .4s;
+}
+.wpp-information i {
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.wpp-information:hover {
+    transform: scale(1.1);
+}
+
+@media (min-width: 600px) {
+    .product {
+        width: 230px;
+        height: 305px;
+    }
+    .need-information h2 {
+        font-size: 3.5rem;
+    }
+    .need-information p {
+        font-size: 1.5rem;
+    }
+}
